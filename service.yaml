@@ -4,6 +4,7 @@ kind: Service
 metadata:
   name: pihole
 spec:
+  type: LoadBalancer
   selector:
     app: pihole-tcp
   ports:
