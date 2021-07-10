@@ -25,15 +25,3 @@ spec:
           value: "America/New_York"
         - name: WEBPASSWORD
           value: "secret"
-        volumeMounts:
-        - name: pihole-local-etc-volume
-          mountPath: "/etc/pihole"
-        - name: pihole-local-dnsmasq-volume
-          mountPath: "/etc/dnsmasq.d"
-      volumes:
-      - name: pihole-local-etc-volume
-        persistentVolumeClaim:
-          claimName: pihole-local-etc-claim
-      - name: pihole-local-dnsmasq-volume
-        persistentVolumeClaim:
-          claimName: pihole-local-dnsmasq-claim
