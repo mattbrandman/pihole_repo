@@ -6,7 +6,7 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-    app: pihole
+    app: pihole-tcp
   ports:
   - port: 8000
     targetPort: 80
@@ -15,7 +15,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: pihole
+  name: pihole-udp
 spec:
   type: LoadBalancer
   selector:
