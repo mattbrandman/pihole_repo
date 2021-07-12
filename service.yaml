@@ -8,6 +8,6 @@ spec:
   selector:
     app: pihole-tcp
   ports:
-  - port: 8000
-    targetPort: 80
+  - port: 80
+    nodePort: 30007
     name: pihole-admin
