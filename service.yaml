@@ -17,11 +17,11 @@ kind: Service
 metadata:
   name: pihole-dns
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: pihole
   ports:
   - port: 53
-    nodePort: 53
+    targetPort: 53
     protocol: UDP
     name: pihole-admin
